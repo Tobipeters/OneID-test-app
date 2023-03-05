@@ -1,13 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { OneidProvider } from "react-oneid";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <OneidProvider
+      apiKey="8grJeK.23Ph2X0SG9Ou8WrkvTHyrP" // API key name = Geet Profile Detail - hantyLara
+      siteDomain={`${window.location.origin}`}
+    >
+      <App />
+    </OneidProvider>
+    ,
   </React.StrictMode>
 );
 
